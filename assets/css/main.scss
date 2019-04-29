@@ -6,19 +6,16 @@
 @import "foundation";
 @import "base";
 
-
 .underline {
-  display: inline;
+  display: inline-block;
   box-shadow: inset 0px -3px $green;
   padding-bottom: 0%;
-  position: relative;
 }
 
 .section-heading {
   @extend .underline;
   font-family: $alt-font;
   text-transform: lowercase;
-  left: 50%;
   text-align: center;
   font-size: 3.25em;
   margin-bottom: 1em;
@@ -56,9 +53,21 @@ h5, .h5 {
 .main-nav {
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   ul{
-    margin-left: 20.5%;
+    margin-left: 15.5%;
   }
 }
+
+#nav {
+text-align:center;
+}
+#nav li {
+display:inline;
+}
+#nav a {
+text-decoration:none;
+padding:0 30px; /* variable width */
+}
+
 
 /********************
   SIDEBAR
@@ -244,12 +253,30 @@ h5, .h5 {
 ********************/
 
 .masthead {
-  height: 80vh;
+  height: 75vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin-top: -1.5em;
+  h1 {
+    font-family: $alt-font;
+    padding: 0 1em;
+    &:after {
+      display: none;
+      @include medium-up {
+        display: block;
+        transform: translate(-50%, -100%) scaleX(1.2);
+      }
+      @include large-up {
+        transform: translate(-47%, -50%) scaleX(1.2);
+      }
+    }
+  }
+  @include medium-up {
+    margin-top: -3em;
+  }
 }
+
 .section-intro {
   padding: 2%;
   .row {
@@ -286,7 +313,7 @@ h5, .h5 {
 }
 
 .section-map{
-  padding: 25px;
+  padding: 10px;
 }
 
 .section-stats {
@@ -384,7 +411,7 @@ h5, .h5 {
 main {
   padding: 1.5em 0 0;
   @include medium-up {
-    padding: 1em 0 0;
+    padding: 3em 0 0;
   }
 }
 

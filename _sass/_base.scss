@@ -81,9 +81,12 @@ body {
 
 main {
   overflow: hidden;
-  height: $small-nav-height;
+  &:before {
+    display: block;
+    height: $small-nav-height;
     @include large-up {
       height: $large-nav-height;
+    }
   }
 }
 
