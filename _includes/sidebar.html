@@ -1,0 +1,44 @@
+<aside class="sidebar">
+  <section class="sidebar-intro editable">
+    <img src="/assets/img/rice-terraces-bali.jpg" alt="Justyn Jen" />
+    <h5>The Trail</h5>
+    <p>Welcome to the trail. We're the Gourdins and we've set out to show you an epic alternative lifestyle that can help you find your freedom, explore the world and live debt free. Are you ready?</p>
+    <a href="/about">More About Us Here!</a>
+  </section>
+
+  <section class="sidebar-entries">
+    <h5>Recent Posts</h5>
+    {% for post in site.posts limit:3 %}
+    {% include entry-item.html %}
+    {% endfor %}
+  </section>
+
+  <section class="sidebar-mailing-list editable">
+    <h5>This Mailing List isn't like other lists...</h5>
+    <p>It's a cool mailing list</p>
+    <a href="https://www.subscribepage.com/100-blog-niches"><button>Join us now!</button></a>
+  </section>
+
+  <section>
+    <h5>Book Your Stay Today</h5>
+    <ins class="bookingaff" data-aid="1624502" data-target_aid="1624502" data-prod="banner" data-width="250" data-height="250" data-lang="en">
+    <!-- Anything inside will go away once widget is loaded. -->
+    <a href="//www.booking.com?aid=1624502">Booking.com</a>
+</ins>
+    <script type="text/javascript">
+      (function(d, sc, u) {
+        var s = d.createElement(sc),
+          p = d.getElementsByTagName(sc)[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = u + '?v=' + (+new Date());
+        p.parentNode.insertBefore(s, p);
+      })(document, 'script', '//aff.bstatic.com/static/affiliate_base/js/flexiproduct.js');
+    </script>
+  </section>
+
+  <section>
+    <h5>Pin With Us!</h5>
+    <a data-pin-do="embedUser" data-pin-board-width="275" data-pin-scale-height="400" data-pin-scale-width="80" href="https://www.pinterest.com/justynjen/"></a>
+  </section>
+</aside>
