@@ -7,7 +7,7 @@ $alt-font      		                     : "Shadows Into Light Two", serif;
 $alt-font-weight		                   : 400;
 $base-font-size                        : 15px;
 $base-line-height                      : 1.5;
-$small-font-size                       : 0.9em;
+$small-font-size                       : 1em;
 
 // Sizes
 $max-content-width                     : 1180px;
@@ -81,13 +81,9 @@ body {
 
 main {
   overflow: hidden;
-  &:before {
-    content: '';
-    display: block;
-    height: $small-nav-height;
+  height: $small-nav-height;
     @include large-up {
       height: $large-nav-height;
-    }
   }
 }
 

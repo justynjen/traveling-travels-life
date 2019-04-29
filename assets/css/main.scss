@@ -4,20 +4,21 @@
 ---
 
 @import "foundation";
-@import "fonts";
 @import "base";
 
 
 .underline {
-  display: inline-block;
+  display: inline;
   box-shadow: inset 0px -3px $green;
   padding-bottom: 0%;
+  position: relative;
 }
 
 .section-heading {
   @extend .underline;
   font-family: $alt-font;
   text-transform: lowercase;
+  left: 50%;
   text-align: center;
   font-size: 3.25em;
   margin-bottom: 1em;
@@ -243,7 +244,7 @@ h5, .h5 {
 ********************/
 
 .masthead {
-  height: 75vh;
+  height: 80vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -383,7 +384,7 @@ h5, .h5 {
 main {
   padding: 1.5em 0 0;
   @include medium-up {
-    padding: 3em 0 0;
+    padding: 1em 0 0;
   }
 }
 
