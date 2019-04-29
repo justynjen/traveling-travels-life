@@ -7,23 +7,6 @@
 @import "fonts";
 @import "base";
 
-.highlighter {
-  position: relative;
-  z-index: 1;
-  &:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: '_';
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    color: #556F44;
-    opacity: .5;
-    font-size: 6em;
-    margin-top: -243px;
-    pointer-events: none;
-  }
-}
 
 .underline {
   display: inline-block;
@@ -32,7 +15,7 @@
 }
 
 .section-heading {
-  @extend .highlighter;
+  @extend .underline;
   font-family: $alt-font;
   text-transform: lowercase;
   text-align: center;
@@ -71,25 +54,10 @@ h5, .h5 {
 
 .main-nav {
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  /*top: 50%;
-  left: 60%;
-  width: 100%;*/
   ul{
-    margin-left: 10.5%;
+    margin-left: 20.5%;
   }
 }
-
-#nav {
-text-align:center;
-}
-#nav li {
-display:inline;
-}
-#nav a {
-text-decoration:none;
-padding:0 30px; /* variable width */
-}
-
 
 /********************
   SIDEBAR
@@ -280,26 +248,7 @@ padding:0 30px; /* variable width */
   background-repeat: no-repeat;
   background-position: center;
   margin-top: -1.5em;
-  h1 {
-    @extend .highlighter;
-    font-family: $alt-font;
-    padding: 0 1em;
-    &:after {
-      display: none;
-      @include medium-up {
-        display: block;
-        transform: translate(-50%, -100%) scaleX(1.2);
-      }
-      @include large-up {
-        transform: translate(-47%, -50%) scaleX(1.2);
-      }
-    }
-  }
-  @include medium-up {
-    margin-top: -3em;
-  }
 }
-
 .section-intro {
   padding: 2%;
   .row {
@@ -336,7 +285,7 @@ padding:0 30px; /* variable width */
 }
 
 .section-map{
-  padding: 10px;
+  padding: 25px;
 }
 
 .section-stats {

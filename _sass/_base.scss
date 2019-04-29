@@ -1,7 +1,7 @@
 // Typography
 $body-font                             : "Fresca", serif;
 $body-font-weight                      : 400;
-$heading-font                          : "Fresca", serif;
+$heading-font                          : "Shadows Into Light Two", serif;
 $heading-font-weight                   : 500;
 $alt-font      		                     : "Shadows Into Light Two", serif;
 $alt-font-weight		                   : 400;
@@ -424,6 +424,7 @@ h6 {
 ********************/
 
 .main-nav {
+  text-align:center;
 	position: absolute;
   top: 0;
   width: 100%;
